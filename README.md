@@ -28,7 +28,8 @@ To run this notebook successfully, please ensure the following prerequisites are
    
 A vLLM inference server must be running and accessible with the deepseek-llm-7b-chat model. Use the following command in a new terminal to launch the server:
 
-`HIP_VISIBLE_DEVICES=0 vllm serve /home/user/Models/deepseek-ai/deepseek-llm-7b-chat \
+```
+HIP_VISIBLE_DEVICES=0 vllm serve /home/user/Models/deepseek-ai/deepseek-llm-7b-chat \
         --gpu-memory-utilization 0.9 \
         --swap-space 16 \
         --disable-log-requests \
@@ -41,7 +42,8 @@ A vLLM inference server must be running and accessible with the deepseek-llm-7b-
         --max-num-seqs 128 \
         --max-num-batched-tokens 2048 \
         --max-model-len 2048 \
-        --distributed-executor-backend "mp"`
+        --distributed-executor-backend "mp"
+```
 
 2. Google Calendar API Tokens
 Valid Google Calendar authentication tokens are required for each potential attendee.
@@ -61,7 +63,8 @@ Ensure all necessary Python libraries are installed. The primary libraries used 
 
 Input JSON format:
 
-`{
+```json
+{
     "Request_id": "6118b54f-907b-4451-8d48-dd13d76033a5",
     "Datetime": "19-07-2025T12:34:55",
     "Location": "IISc Bangalore",
@@ -76,11 +79,13 @@ Input JSON format:
     ],
     "Subject": "Agentic AI Project Status Update",
     "EmailContent": "Hi team, let's meet on Thursday for 30 minutes to discuss the status of Agentic AI Project."
-}`
+}
+```
 
 Output JSON format:
 
-`{
+```json
+{
     "Request_id": "6118b54f-907b-4451-8d48-dd13d76033a5",
     "Datetime": "19-07-2025T12:34:55",
     "Location": "IISc Bangalore",
@@ -183,7 +188,8 @@ Output JSON format:
     "EventEnd": "2025-07-24T11:00:00+05:30",
     "Duration_mins": "30",
     "MetaData": {}
-}`
+}
+```
 
 
 
